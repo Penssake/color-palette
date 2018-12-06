@@ -1,0 +1,74 @@
+@import '../../styles/_vars';
+
+@media (max-width: 950px) {
+  .hamburger, .hamburgeropen {
+    width: 100%;
+    height: 2rem;
+    position: absolute;
+    bottom: 1rem;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .15s ease-in-out;
+    -moz-transition: .15s ease-in-out;
+    -o-transition: .15s ease-in-out;
+    transition: .15s ease-in-out;
+    cursor: pointer;
+  } 
+  .hamburger span, .hamburgeropen span {
+    display: block;
+    margin: 0 auto;
+    height: .30rem;
+    width: 1.85rem;
+    background: $header-gray;
+    border-radius: .075rem;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .15s ease-in-out;
+    -moz-transition: .15s ease-in-out;
+    -o-transition: .15s ease-in-out;
+    transition: .15s ease-in-out;
+  } 
+  .hamburger span:nth-child(1), .hamburgeropen span:nth-child(1) {
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  .hamburger span:nth-child(2), .hamburgeropen span:nth-child(2) {
+    margin-top: .35rem;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  .hamburger span:nth-child(3), .hamburgeropen span:nth-child(3) {
+    margin-top: .35rem;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    transform-origin: left center;
+  }
+  .hamburgeropen span:nth-child(1) {
+    margin: 0 auto;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .hamburgeropen span:nth-child(2) {
+    width: 0;
+    opacity: 0;
+  }
+
+  .hamburgeropen span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}
