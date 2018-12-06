@@ -1,0 +1,26 @@
+* {
+    position: static;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    // box-sizing: border-box;
+  }
+
+  html, body {
+  position: absolute;
+  overflow-x: hidden;
+  head,link,script { display: none; }
+  body { position: relative;}
+  span, em, strong, i { display: inline}
+}
+  input, textarea {
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }

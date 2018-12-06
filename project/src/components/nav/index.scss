@@ -1,0 +1,68 @@
+@import '../../styles/_vars';
+
+@media (max-width: 750px) {
+    button {
+        width: 40%;
+        margin-left: 25%; 
+        height: 2rem;
+        border: .5px solid $header-gray;
+        border-radius: 9px;
+        font-weight: bold;
+    }
+    nav {
+      cursor: pointer;
+      background: $nav-background;
+      position: fixed;
+      z-index: 9;
+      display: none;
+      padding: 2rem;
+      width: 100%;
+    }
+  
+    .hamburgeropen ~ nav {
+      display: block;
+    }
+  
+    .navNodes {
+      font-size: 1.5rem;
+      text-align: center;
+      width: 20%;
+      margin-left: 35%;
+      text-decoration: none;
+      color: $nav-font;
+      padding: .5rem 0;
+      display: block;
+    }
+  }
+  
+  @media (min-width: 750px) {
+    button {
+        width: 95%;
+        margin-left: -.5rem;
+        height: 2rem;
+        border: .5px solid $header-gray;
+        border-radius: 9px;
+        font-weight: bold;
+    }
+    nav {
+      cursor: pointer;
+      height: 100%;
+      background: $nav-background;
+      padding-top: 2rem;
+      padding-left: 1rem;
+      width: 15%;
+      display: block;
+      position: fixed;
+      z-index: 1;
+      top: 3.5rem;
+      left: 0;
+    }
+  
+   .navNodes {
+      font-size: 1rem;
+      color: $nav-font;
+      padding: .5rem 0;
+      display: block;
+      text-decoration: none;
+    }
+  }
