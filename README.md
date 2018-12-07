@@ -1,1 +1,3 @@
-# color-palette
+# color-palette-frontend
+
+### Deployment
