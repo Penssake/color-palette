@@ -18,7 +18,7 @@ class ColorsAll extends Component {
 
   componentDidMount() {
     return superagent
-      .get(${__API_URL__}/colorsAll)
+      .get(`${__API_URL__}/colorsAll`)
       .then(response => {
         this.setState({
           colorState: response.body,
