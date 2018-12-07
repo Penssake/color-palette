@@ -10,13 +10,17 @@ webpackConfig.entry = `${__dirname}/src/main.js`;
 webpackConfig.output = {
   filename: '[name].[hash].js',
   path: `${__dirname}/build`,
-  API_URL: process.env.__API_URL__,
 };
 
 webpackConfig.plugins = [
   new HtmlWebpackPlugin({
     title: '',
   }),
+  new DefinePlugin({
+    API_URL: JSON.stringify(process.env.__API_URL__),
+  }),
+];
+
 
   new MiniCssPlugin({
     filename: '[name].[hash].css',
