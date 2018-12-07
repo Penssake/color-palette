@@ -5,8 +5,6 @@ import util from '../../lib/util.js'
 
 import './index.scss'
 
-const __API_URL__ = 'http://localhost:8000'
-
 class ColorsAll extends Component {
   constructor(props) {
     super(props)
@@ -20,7 +18,7 @@ class ColorsAll extends Component {
 
   componentDidMount() {
     return superagent
-      .get(`${__API_URL__}/colorsAll`)
+      .get(process.env.__API_URL__}/colorsAll)
       .then(response => {
         this.setState({
           colorState: response.body,
@@ -32,7 +30,7 @@ class ColorsAll extends Component {
   clickHandler(e) {
     let clickedID = e.target.dataset.id
     return superagent
-    .get(`${__API_URL__}/colors/${clickedID}`)
+    .get(`process.env.__API_URL__/colors/${clickedID}`)
     .then(response => {
         this.setState({
             colorState: response.body,
