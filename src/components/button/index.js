@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import superagent from 'superagent'
+import './index.scss'
 
 
 class Button extends Component {

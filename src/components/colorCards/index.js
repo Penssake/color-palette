@@ -18,7 +18,39 @@ class ColorsAll extends Component {
   }
 
   componentDidMount() {
-    let page = '12'
+    let page
+    switch (location.pathname) {
+      case '/':
+        page = 0
+        break
+      case '/page1':
+        page = '0'
+        break
+      case '/page2':
+        page = '12'
+        break
+      case '/page3':
+        page = '24'
+        break
+      case '/page4':
+        page = '36'
+        break
+      case '/page5':
+        page = '48'
+        break
+      case '/page6':
+        page = '60'
+        break
+      case '/page7':
+        page = '73'
+        break
+      case '/page8':
+        page = '85'
+        break
+      case '/page9':
+        page = '97'
+        break
+    }
     return superagent
       .get(`${__API_URL__}/colorsAll/${page}`)
       .then(response => {
@@ -67,9 +99,6 @@ class ColorsAll extends Component {
     return (
       <div className={'cardCase' + toggleClass}>
         {renderData}
-        <div className='footer'>
-          <Pagination />
-        </div>
       </div>
     )
   }

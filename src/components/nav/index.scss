@@ -1,5 +1,8 @@
 @import '../../styles/_vars';
 
+nav {
+  display: block;
+}
 @media (max-width: 750px) {
     button {
         width: 40%;
@@ -46,13 +49,13 @@
     }
     nav {
       cursor: pointer;
-      height: 95%;
+      height: 100%;
       background: $nav-background;
       padding-top: 2rem;
       padding-left: 1rem;
       width: 15%;
       display: block;
-      position: absolute;
+      position: fixed;
       z-index: 1;
       top: 3.5rem;
       left: 0;

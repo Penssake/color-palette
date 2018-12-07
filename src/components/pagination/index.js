@@ -7,15 +7,15 @@ class Pagination extends Component {
     return (
       <div className='pagination'>
         <div className='nodeList'>
-          <Link className='pageNodes' to='/' query={{page: 1}}>1</Link>
-          <Link className='pageNodes' to='/' query={{page: 2}}>2</Link>
-          <Link className='pageNodes' to='/' query={{page: 3}}>3</Link>
-          <Link className='pageNodes' to='/' query={{page: 4}}>4</Link>
-          <Link className='pageNodes' to='/' query={{page: 5}}>5</Link>
-          <Link className='pageNodes' to='/' query={{page: 6}}>6</Link>
-          <Link className='pageNodes' to='/' query={{page: 7}}>7</Link>
-          <Link className='pageNodes' to='/' query={{page: 8}}>8</Link>
-          <Link className='pageNodes' to='/' query={{page: 9}}>9</Link>
+          <Link className='pageNodes' to='/page1'>1</Link>
+          <Link className='pageNodes' to='/page2'>2</Link>
+          <Link className='pageNodes' to='/page3'>3</Link>
+          <Link className='pageNodes' to='/page4'>4</Link>
+          <Link className='pageNodes' to='/page5'>5</Link>
+          <Link className='pageNodes' to='/page6'>6</Link>
+          <Link className='pageNodes' to='/page7'>7</Link>
+          <Link className='pageNodes' to='/page8'>8</Link>
+          <Link className='pageNodes' to='/page9'>9</Link>
         </div>
       </div>
     )
