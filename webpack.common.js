@@ -10,7 +10,7 @@ webpackConfig.entry = `${__dirname}/src/main.js`;
 webpackConfig.output = {
   filename: '[name].[hash].js',
   path: `${__dirname}/build`,
-  __API_URL__: process.env.__API_URL__,
+  API_URL: process.env.__API_URL__,
 };
 
 webpackConfig.plugins = [
