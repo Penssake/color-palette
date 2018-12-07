@@ -1,3 +1,3 @@
 # color-palette-frontend
 
-### Deployment
+### Deployment webpack
