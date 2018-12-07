@@ -1,17 +1,17 @@
-require('dotenv').config();
+require('dotenv').config()
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssPlugin = require('mini-css-extract-plugin');
-const { DefinePlugin } = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssPlugin = require('mini-css-extract-plugin')
+const { DefinePlugin } = require('webpack')
 
-const webpackConfig = module.exports = {};
+const webpackConfig = module.exports = {}
 
-webpackConfig.entry = `${__dirname}/src/main.js`;
+webpackConfig.entry = `${__dirname}/src/main.js`
 
 webpackConfig.output = {
   filename: '[name].[hash].js',
   path: `${__dirname}/build`,
-};
+}
 
 webpackConfig.plugins = [
   new HtmlWebpackPlugin({
@@ -23,9 +23,9 @@ webpackConfig.plugins = [
   new DefinePlugin({
     __API_URL__: JSON.stringify(process.env.__API_URL__),
   }),
-];
+]
 
-webpackConfig.module = {};
+webpackConfig.module = {}
 webpackConfig.module.rules = [
   {
     test: /\.(png|svg|jpg|gif)$/,
@@ -45,4 +45,4 @@ webpackConfig.module.rules = [
       },
     },
   },
-];
+]

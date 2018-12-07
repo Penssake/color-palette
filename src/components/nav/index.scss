@@ -1,5 +1,8 @@
 @import '../../styles/_vars';
 
+nav {
+  display: block;
+}
 @media (max-width: 750px) {
     button {
         width: 40%;

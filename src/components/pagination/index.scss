@@ -1,14 +1,9 @@
-.footer {
-    width: 100%;
-    display: inline-block;
-}
-@media (max-width: 750px) {
-    .footer {
-        height: 60px;
-    }
-}
-
 @import '../../styles/_vars';
+
+.pageFooter {
+    display: inline-block;
+    width: 100%;
+}
 
 @media (max-width: 750px) {
     .pagination {
@@ -19,7 +14,7 @@
     .pagination {
         height: 1rem;
         width: 50%;
-        margin-left: 25%;
+        margin-left: 20%;
         padding-top: 3rem;
     }
     .pageNodes {
@@ -30,7 +25,7 @@
     .pagination {
         height: 1rem;
         width: 50%;
-        margin-left: 40%;
+        margin-left: 25%;
         padding-top: 3rem;
     }
     .pageNodes {

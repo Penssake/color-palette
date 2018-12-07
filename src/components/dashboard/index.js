@@ -1,74 +1,63 @@
 import React, {Component} from 'react'
 import {BrowserRouter, Route} from 'react-router-dom'
+import ColorsAll from '../colorCards'
 import superagent from 'superagent'
-import util from '../../lib/util.js'
-import Pagination from '../pagination'
 
-import './index.scss'
 
-class ColorsAll extends Component {
+class Dashboard extends Component {
   constructor(props) {
     super(props)
     this.state = {
       colorState: null,
       individualView: false,
     }
-
-    this.clickHandler = this.clickHandler.bind(this)
+    let {location} = this.props
   }
 
   componentDidMount() {
-    let page
+    let color
     switch (location.pathname) {
-      case '/':
-        page = 0
+      case '/red':
+        color = 'red'
         break
-      case '/page1':
-        page = '0'
+      case '/yellow':
+        color = 'yellow'
         break
-      case '/page2':
-        page = '12'
+      case '/green':
+        color = 'green'
         break
-      case '/page3':
-        page = '24'
+      case '/orange':
+        color = 'orange'
         break
-      case '/page4':
-        page = '36'
+      case '/blue':
+        color = 'blue'
         break
-      case '/page5':
-        page = '48'
+      case '/purple':
+        color = 'purple'
         break
-      case '/page6':
-        page = '60'
+      case '/brown':
+        color = 'brown'
         break
-      case '/page7':
-        page = '73'
-        break
-      case '/page8':
-        page = '85'
-        break
-      case '/page9':
-        page = '97'
+      case '/gray':
+        color = 'gray'
         break
     }
     return superagent
-      .get(`${__API_URL__}/colorsAll/${page}`)
+      .get(`${__API_URL__}/colorQuery/${color}`)
       .then(response => {
+        console.log(response)
         this.setState(() => ({
           colorState: response.body,
         }))
-      })
-      .catch(err => console.log(err))
+      }).catch(err => console.log(err))
   }
 
-  clickHandler(e) {
-    let clickedID = e.target.dataset.id
+  randomSelection() {
     return superagent
-      .get(`${__API_URL__}/colors/${clickedID}`)
+      .get(`${__API_URL__}/random`)
       .then(response => {
         this.setState({
           colorState: response.body,
-          individualView: true,
         })
       })
       .catch(err => console.log(err))
@@ -104,4 +93,4 @@ class ColorsAll extends Component {
   }
 }
 
-export default ColorsAll
+export default Dashboard
