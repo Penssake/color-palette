@@ -1,42 +1,63 @@
 import React, {Component} from 'react'
 import {BrowserRouter, Route} from 'react-router-dom'
+import ColorsAll from '../colorCards'
 import superagent from 'superagent'
-import util from '../../lib/util.js'
-import Pagination from '../pagination'
 
-import './index.scss'
 
-class ColorsAll extends Component {
+class Dashboard extends Component {
   constructor(props) {
     super(props)
     this.state = {
       colorState: null,
       individualView: false,
     }
-
-    this.clickHandler = this.clickHandler.bind(this)
+    let {location} = this.props
   }
 
   componentDidMount() {
-    let page = '12'
+    let color
+    switch (location.pathname) {
+      case '/red':
+        color = 'red'
+        break
+      case '/yellow':
+        color = 'yellow'
+        break
+      case '/green':
+        color = 'green'
+        break
+      case '/orange':
+        color = 'orange'
+        break
+      case '/blue':
+        color = 'blue'
+        break
+      case '/purple':
+        color = 'purple'
+        break
+      case '/brown':
+        color = 'brown'
+        break
+      case '/gray':
+        color = 'gray'
+        break
+    }
     return superagent
-      .get(`${__API_URL__}/colorsAll/${page}`)
+      .get(`${__API_URL__}/colorQuery/${color}`)
       .then(response => {
+        console.log(response)
         this.setState(() => ({
           colorState: response.body,
         }))
-      })
-      .catch(err => console.log(err))
+      }).catch(err => console.log(err))
   }
 
-  clickHandler(e) {
-    let clickedID = e.target.dataset.id
+  randomSelection() {
     return superagent
-      .get(`${__API_URL__}/colors/${clickedID}`)
+      .get(`${__API_URL__}/random`)
       .then(response => {
         this.setState({
           colorState: response.body,
-          individualView: true,
         })
       })
       .catch(err => console.log(err))
@@ -67,12 +88,9 @@ class ColorsAll extends Component {
     return (
       <div className={'cardCase' + toggleClass}>
         {renderData}
-        <div className='footer'>
-          <Pagination />
-        </div>
       </div>
     )
   }
 }
 
-export default ColorsAll
+export default Dashboard

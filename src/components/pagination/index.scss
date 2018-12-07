@@ -1,0 +1,36 @@
+@import '../../styles/_vars';
+
+.pageFooter {
+    display: inline-block;
+    width: 100%;
+}
+
+@media (max-width: 750px) {
+    .pagination {
+        display: none;
+    }
+}
+@media (min-width: 750px) {
+    .pagination {
+        height: 1rem;
+        width: 50%;
+        margin-left: 20%;
+        padding-top: 3rem;
+    }
+    .pageNodes {
+        margin: 0 2rem 0 0;
+    }
+}
+@media (min-width: 950px) {
+    .pagination {
+        height: 1rem;
+        width: 50%;
+        margin-left: 25%;
+        padding-top: 3rem;
+    }
+    .pageNodes {
+        margin: 0 2rem 0 0;
+        color: $header-gray;
+        text-decoration: none;
+    }
+}

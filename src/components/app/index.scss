@@ -1,5 +1,9 @@
 .footer {
     width: 100%;
-    height : 60px;
     display: inline-block;
+}
+@media (max-width: 750px) {
+    .footer {
+        height: 60px;
+    }
 }

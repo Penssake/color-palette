@@ -9,13 +9,13 @@ class Header extends Component {
     return (
       <div className='headerClass'>
         <header>
-        <a href='/'><img src={logo} alt='colors logo'/></a>
+          <a href='/'><img src={logo} alt='colors logo'/></a>
           <input
             type="text"
             className="input"
             placeholder='Search'
           />
-      </header>
+        </header>
       </div>
 
     )

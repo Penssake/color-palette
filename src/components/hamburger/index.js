@@ -14,7 +14,7 @@ class Hamburger extends Component {
   clickHandler() {
     this.setState( { open: !this.state.open } )
   }
-  
+
   render() {
     let toggleClass = this.state.open ? 'open' : ''
     return (
