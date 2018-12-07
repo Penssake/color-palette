@@ -30,7 +30,7 @@ class ColorsAll extends Component {
   clickHandler(e) {
     let clickedID = e.target.dataset.id
     return superagent
-    .get(`${__API_URL__}/colors/clickedID`)
+    .get(`${__API_URL__}/colors/${clickedID}`)
     .then(response => {
         this.setState({
             colorState: response.body,

@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssPlugin = require('mini-css-extract-plugin');
+const { DefinePlugin } = require('webpack');
 
 const webpackConfig = module.exports = {};
 
@@ -16,14 +17,11 @@ webpackConfig.plugins = [
   new HtmlWebpackPlugin({
     title: '',
   }),
-  new DefinePlugin({
-    API_URL: JSON.stringify(process.env.__API_URL__),
-  }),
-];
-
-
   new MiniCssPlugin({
     filename: '[name].[hash].css',
+  }),
+  new DefinePlugin({
+    __API_URL__: JSON.stringify(process.env.__API_URL__),
   }),
 ];
 

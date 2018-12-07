@@ -9,7 +9,6 @@ const HtmlWebpackExcludeEmptyAssetsPlugin = require('html-webpack-exclude-empty-
 module.exports = merge(common, {
   mode: 'production',
   plugins: [
-    //! Cleans our build folder before every new transpilation
     new CleanWebpackPlugin(['build']),
     new MiniCssExtractPlugin({
       filename: 'styles.[hash].css',
