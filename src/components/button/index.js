@@ -10,7 +10,7 @@ class Button extends Component {
 
 clickHandler(e) {
     return superagent
-    .get(process.env.__API_URL__/colors/random/)
+    .get(process.env.__API_URL__/colors/random)
     .then(response => {
         this.setState({
             colorState: response.body,
