@@ -1,3 +1,6 @@
+# Update 12/07 6:27PM
+- Viewport added to react app for responsive designs. Mobile && Tablet && PC Views.
+
 # color-palette-frontend
 
 to run frontend
