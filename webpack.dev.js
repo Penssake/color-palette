@@ -1,25 +1,25 @@
-const merge = require('webpack-merge');
-const common = require('./webpack.common.js');
-const { HotModuleReplacementPlugin } = require('webpack');
+const merge = require('webpack-merge')
+const common = require('./webpack.common.js')
+const { HotModuleReplacementPlugin } = require('webpack')
 
-const webpackDevConfig = {};
+const webpackDevConfig = {}
 
-webpackDevConfig.mode = 'development';
+webpackDevConfig.mode = 'development'
 
-webpackDevConfig.devtool = 'inline-source-map';
+webpackDevConfig.devtool = 'inline-source-map'
 
 webpackDevConfig.devServer = {
   contentBase: './build',
   open: true,
   hot: true,
   historyApiFallback: true,
-};
+}
 
 webpackDevConfig.plugins = [
   new HotModuleReplacementPlugin(),
-];
+]
 
-webpackDevConfig.module = {};
+webpackDevConfig.module = {}
 webpackDevConfig.module.rules = [
   {
     test: /\.s?css$/,
@@ -29,6 +29,6 @@ webpackDevConfig.module.rules = [
       'sass-loader',
     ],
   },
-];
+]
 
-module.exports = merge(common, webpackDevConfig);
+module.exports = merge(common, webpackDevConfig)

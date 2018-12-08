@@ -86,7 +86,8 @@
         margin-left: 20%;
     }
     .container {
-        height: 100px,
+        height: 100px;
+        transition: 0.3s;
     }
     .card {
         color: $header-gray;
