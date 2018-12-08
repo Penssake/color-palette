@@ -44,9 +44,11 @@ class Button extends Component {
       }
     }
     return (
-      <div onClick={this.clickHandler} className={'card' + toggleClass}>
-        <div className={'container' + toggleClass} style={mappedStyle}></div>
-        <h1>#{mapLabel}</h1>
+      <div className={'random cardCase' + toggleClass}>
+        <div onClick={this.clickHandler} className={'fadeIn random card' + toggleClass}>
+          <div className={'container' + toggleClass} style={mappedStyle}></div>
+          <h1>#{mapLabel}</h1>
+        </div>
       </div>
     )
   }

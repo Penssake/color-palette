@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import './index.scss'
 import logo from '../../assets/logo-symbol.svg'
-// import {Link} from 'react-router-dom' href for the purpose of page reload
+import './index.scss'
 
 
 class Header extends Component {

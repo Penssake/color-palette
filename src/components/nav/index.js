@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import './index.scss'
 import {Link} from 'react-router-dom'
 import Button from '../button'
+import './index.scss'
 
 class Nav extends Component {
   render() {
