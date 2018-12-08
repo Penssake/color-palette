@@ -4,8 +4,6 @@ import superagent from 'superagent'
 import util from '../../lib/util.js'
 import Pagination from '../pagination'
 
-import './index.scss'
-
 class ColorsAll extends Component {
   constructor(props) {
     super(props)
@@ -90,7 +88,7 @@ class ColorsAll extends Component {
         mappedStyle = {
           background: `rgb(${mapRed}, ${mapGreen}, ${mapBlue})`,
         },
-        <div onClick={this.clickHandler} className={'card' + toggleClass} key={i}>
+        <div onClick={this.clickHandler} className={'fadeIn card' + toggleClass} key={i}>
           <div className={'container' + toggleClass} data-id={mappedColor._id} style={mappedStyle}></div>
           <h1>#{mappedColor.label}</h1>
         </div>

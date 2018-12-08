@@ -7,6 +7,7 @@ import Hamburger from '../hamburger'
 import Dash from '../dashboard'
 import Button from '../button'
 import Pagination from '../pagination'
+
 import '../../styles/main.scss'
 import './index.scss'
 
