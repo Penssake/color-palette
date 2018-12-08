@@ -1,4 +1,6 @@
-### Update 12/07 6:27PM
+https://color-palette-challenge.herokuapp.com/
+
+Update 12/07 6:27PM
 - Viewport added to react app for responsive designs. Mobile && Tablet && PC Views.
 
 # color-palette-frontend
